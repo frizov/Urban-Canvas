@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		71EE07782FF51A6300675A8F /* Urban-Canvas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Urban-Canvas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		71EE07252FF515E900675A8F /* Urban-Canvas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Urban-Canvas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		71EE077A2FF51A6300675A8F /* Urban-Canvas */ = {
+		71EE07272FF515E900675A8F /* Urban-Canvas */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "Urban-Canvas";
 			sourceTree = "<group>";
@@ -19,7 +19,7 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		71EE07752FF51A6300675A8F /* Frameworks */ = {
+		71EE07222FF515E900675A8F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -29,18 +29,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		71EE076F2FF51A6300675A8F = {
+		71EE071C2FF515E900675A8F = {
 			isa = PBXGroup;
 			children = (
-				71EE077A2FF51A6300675A8F /* Urban-Canvas */,
-				71EE07792FF51A6300675A8F /* Products */,
+				71EE07272FF515E900675A8F /* Urban-Canvas */,
+				71EE07262FF515E900675A8F /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		71EE07792FF51A6300675A8F /* Products */ = {
+		71EE07262FF515E900675A8F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				71EE07782FF51A6300675A8F /* Urban-Canvas.app */,
+				71EE07252FF515E900675A8F /* Urban-Canvas.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,64 +48,64 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		71EE07772FF51A6300675A8F /* Urban-Canvas */ = {
+		71EE07242FF515E900675A8F /* Urban-Canvas */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 71EE07832FF51A6400675A8F /* Build configuration list for PBXNativeTarget "Urban-Canvas" */;
+			buildConfigurationList = 71EE07302FF515EB00675A8F /* Build configuration list for PBXNativeTarget "Urban-Canvas" */;
 			buildPhases = (
-				71EE07742FF51A6300675A8F /* Sources */,
-				71EE07752FF51A6300675A8F /* Frameworks */,
-				71EE07762FF51A6300675A8F /* Resources */,
+				71EE07212FF515E900675A8F /* Sources */,
+				71EE07222FF515E900675A8F /* Frameworks */,
+				71EE07232FF515E900675A8F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				71EE077A2FF51A6300675A8F /* Urban-Canvas */,
+				71EE07272FF515E900675A8F /* Urban-Canvas */,
 			);
 			name = "Urban-Canvas";
 			packageProductDependencies = (
 			);
 			productName = "Urban-Canvas";
-			productReference = 71EE07782FF51A6300675A8F /* Urban-Canvas.app */;
+			productReference = 71EE07252FF515E900675A8F /* Urban-Canvas.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		71EE07702FF51A6300675A8F /* Project object */ = {
+		71EE071D2FF515E900675A8F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2660;
 				LastUpgradeCheck = 2660;
 				TargetAttributes = {
-					71EE07772FF51A6300675A8F = {
+					71EE07242FF515E900675A8F = {
 						CreatedOnToolsVersion = 26.6;
 					};
 				};
 			};
-			buildConfigurationList = 71EE07732FF51A6300675A8F /* Build configuration list for PBXProject "Urban-Canvas" */;
+			buildConfigurationList = 71EE07202FF515E900675A8F /* Build configuration list for PBXProject "Urban-Canvas" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 71EE076F2FF51A6300675A8F;
+			mainGroup = 71EE071C2FF515E900675A8F;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 71EE07792FF51A6300675A8F /* Products */;
+			productRefGroup = 71EE07262FF515E900675A8F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				71EE07772FF51A6300675A8F /* Urban-Canvas */,
+				71EE07242FF515E900675A8F /* Urban-Canvas */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		71EE07762FF51A6300675A8F /* Resources */ = {
+		71EE07232FF515E900675A8F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -115,7 +115,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		71EE07742FF51A6300675A8F /* Sources */ = {
+		71EE07212FF515E900675A8F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -125,7 +125,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		71EE07812FF51A6400675A8F /* Debug */ = {
+		71EE072E2FF515EB00675A8F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -189,7 +189,7 @@
 			};
 			name = Debug;
 		};
-		71EE07822FF51A6400675A8F /* Release */ = {
+		71EE072F2FF515EB00675A8F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -246,7 +246,7 @@
 			};
 			name = Release;
 		};
-		71EE07842FF51A6400675A8F /* Debug */ = {
+		71EE07312FF515EB00675A8F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -278,7 +278,7 @@
 			};
 			name = Debug;
 		};
-		71EE07852FF51A6400675A8F /* Release */ = {
+		71EE07322FF515EB00675A8F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -313,25 +313,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		71EE07732FF51A6300675A8F /* Build configuration list for PBXProject "Urban-Canvas" */ = {
+		71EE07202FF515E900675A8F /* Build configuration list for PBXProject "Urban-Canvas" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				71EE07812FF51A6400675A8F /* Debug */,
-				71EE07822FF51A6400675A8F /* Release */,
+				71EE072E2FF515EB00675A8F /* Debug */,
+				71EE072F2FF515EB00675A8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		71EE07832FF51A6400675A8F /* Build configuration list for PBXNativeTarget "Urban-Canvas" */ = {
+		71EE07302FF515EB00675A8F /* Build configuration list for PBXNativeTarget "Urban-Canvas" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				71EE07842FF51A6400675A8F /* Debug */,
-				71EE07852FF51A6400675A8F /* Release */,
+				71EE07312FF515EB00675A8F /* Debug */,
+				71EE07322FF515EB00675A8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 71EE07702FF51A6300675A8F /* Project object */;
+	rootObject = 71EE071D2FF515E900675A8F /* Project object */;
 }
