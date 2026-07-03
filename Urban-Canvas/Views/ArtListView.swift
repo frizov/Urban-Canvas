@@ -16,6 +16,8 @@ struct ArtListView: View {
                 } label: {
                     ArtElementView(element: element)
                 }
+                .alignmentGuide(.listRowSeparatorLeading) { dimensions in dimensions[.leading]
+                }
             }
             .navigationTitle("Liste des Street Art")
         }

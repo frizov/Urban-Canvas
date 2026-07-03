@@ -17,7 +17,7 @@ struct ArtElementView: View {
                 } placeholder: {
                     Image(systemName: "photo")
                 }
-                    .scaledToFit()
+                    .scaledToFill()
                     .frame(width: 60, height: 60)
                     .clipped()
                     .clipShape(.circle)

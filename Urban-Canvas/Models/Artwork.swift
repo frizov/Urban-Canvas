@@ -22,3 +22,4 @@ struct Artwork : Identifiable {
     let adresse: String
     let coordinate: CLLocationCoordinate2D
 }
+

@@ -42,6 +42,7 @@ struct ArtDetailView: View {
                         .fontWeight(.bold)
                     Text(element.condition)
                 }
+//         TO DO = REFACTOR LIKE THIS IF I HAVE TIME       Text("\(Text("nanana").fontWeight(.bold))\(Text(element.condition))")
                 HStack(spacing: 0) {
                     Text("Date : ")
                         .fontWeight(.bold)
@@ -60,7 +61,11 @@ struct ArtDetailView: View {
                     + Text(" Longitude : \(Double(element.coordinate.longitude), specifier: "%.4f"))")
                 }
                 Spacer()
-                Map()
+                Map() {
+                    Annotation(element.name, coordinate: element.coordinate, anchor: .center) {
+                        ArtMapElementView(element: element)
+                    }
+                }
                     .frame(width: .infinity, height: 160)
                     .clipShape(RoundedRectangle(cornerRadius: 25))
                 Spacer()
