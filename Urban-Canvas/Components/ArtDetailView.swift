@@ -10,6 +10,7 @@ import MapKit
 
 struct ArtDetailView: View {
     var element: Artwork
+    @Binding var isFilterButtonShowing: Bool
     
     var body: some View {
         VStack {
@@ -22,7 +23,8 @@ struct ArtDetailView: View {
             .scaledToFill()
             .frame(maxWidth: .infinity, maxHeight: 280)
             .clipped()
-            
+            .onAppear { isFilterButtonShowing.toggle() }
+            .onDisappear { isFilterButtonShowing.toggle() }
             VStack(alignment: .leading) {
                 Text(element.name)
                     .font(.title)
@@ -80,5 +82,5 @@ struct ArtDetailView: View {
     
 }
 #Preview {
-    ArtListView()
+//    ArtListView()
 }
