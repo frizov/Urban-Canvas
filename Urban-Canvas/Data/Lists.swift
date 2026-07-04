@@ -8,12 +8,16 @@
 import Foundation
 import MapKit
 
+var filterTypes: [String] = [
+    "Tous", "Invaders", "Mosaïque", "Mural", "Stencil", "Calligraphie"
+]
+
 var listArtworks: [Artwork] =
 [
     Artwork(
         image: URL(string: "https://streetartcities.com/media/d/d809dfdd-8f35-4f8a-a98b-a6e8da3857c0/orig.jpg")!,
         name: "PA_1185",
-        type: "Invader",
+        type: "Invaders",
         description: "Cette œuvre, intitulée PA_1185, est une mosaïque en pixels créée par le célèbre artiste urbain Invader. Située au 61 Rue de Charonne dans le 11e arrondissement de Paris, elle s'intègre parfaitement dans le paysage urbain de la capitale, mêlant la culture rétro du jeu vidéo à l'art contemporain.",
         condition: "Bonne",
         date: ("Decembre", 2025),

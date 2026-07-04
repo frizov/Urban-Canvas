@@ -8,22 +8,36 @@
 import SwiftUI
 
 struct ArtListView: View {
+    @Binding var artlist: [Artwork]
+    @Binding var selectedType: String
+    @Binding var isFilterButtonShowing: Bool
     var body: some View {
         NavigationStack {
             List(listArtworks) { element in
-                NavigationLink {
-                    ArtDetailView(element: element)
-                } label: {
-                    ArtElementView(element: element)
-                }
-                .alignmentGuide(.listRowSeparatorLeading) { dimensions in dimensions[.leading]
+                if selectedType == "Tous" {
+                    NavigationLink {
+                        ArtDetailView(element: element, isFilterButtonShowing: $isFilterButtonShowing)
+                    } label: {
+                        ArtElementView(element: element)
+                    }
+                    .alignmentGuide(.listRowSeparatorLeading) { dimensions in dimensions[.leading]
+                    }
+                } else if element.type == selectedType {
+                    NavigationLink {
+                        ArtDetailView(element: element, isFilterButtonShowing: $isFilterButtonShowing)
+                    } label: {
+                        ArtElementView(element: element)
+                    }
+                    .alignmentGuide(.listRowSeparatorLeading) { dimensions in dimensions[.leading]
+                    }
                 }
             }
             .navigationTitle("Liste des Street Art")
         }
+//        .overlay(alignment: .top) { FilterButtonView()}
     }
 }
 
 #Preview {
-    ArtListView()
+//    ArtListView(artlist: $artlist)
 }
