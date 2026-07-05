@@ -12,6 +12,7 @@ struct ArtDetailView: View {
     var element: Artwork
     @Binding var isFilterButtonShowing: Bool
     
+    
     var body: some View {
         VStack {
             AsyncImage(url: element.image) { image in
@@ -34,39 +35,18 @@ struct ArtDetailView: View {
                 Text(element.description)
                     .padding(.bottom, 5)
                     .font(.default)
-                HStack(spacing: 0) {
-                    Text("Type : ")
-                        .fontWeight(.bold)
-                    Text(element.type)
-                }
-                HStack(spacing: 0) {
-                    Text("Condition : ")
-                        .fontWeight(.bold)
-                    Text(element.condition)
-                }
-//         TO DO = REFACTOR LIKE THIS IF I HAVE TIME       Text("\(Text("nanana").fontWeight(.bold))\(Text(element.condition))")
-                HStack(spacing: 0) {
-                    Text("Date : ")
-                        .fontWeight(.bold)
-                    Text(element.date.month + " " + String(element.date.year))
-                }
-                HStack(spacing: 0) {
-                    Text("Auteur : ")
-                        .fontWeight(.bold)
-                    Text(element.auteur)
-                }
-                HStack(spacing: 0) {
-                    Text("Localisation : ")
-                        .fontWeight(.bold)
-                    + Text("\(element.adresse), "+"\(element.city) ")
-                    + Text("(Latitude : \(Double(element.coordinate.latitude), specifier: "%.4f") ,")
-                    + Text(" Longitude : \(Double(element.coordinate.longitude), specifier: "%.4f"))")
-                }
+                Text("\(Text("Type : ").fontWeight(.bold))\(Text(element.type))")
+                Text("\(Text("Condition : ").fontWeight(.bold))\(Text(element.condition))")
+                Text("\(Text("Date : ").fontWeight(.bold))\(Text(element.date.month + " " + String(element.date.year)))")
+                Text("\(Text("Auteur : ").fontWeight(.bold))\(Text(element.auteur))")
+                Text("\(Text("Localisation : ").fontWeight(.bold))\(Text("\(element.adresse), "+"\(element.city) "))\(Text("(Latitude : \(Double(element.coordinate.latitude), specifier: "%.4f") ,"))\(Text(" Longitude : \(Double(element.coordinate.longitude), specifier: "%.4f"))"))")
                 Spacer()
-                Map() {
+                Map(position: .constant(.region(MKCoordinateRegion(center: element.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)))))
+                    {
                     Annotation(element.name, coordinate: element.coordinate, anchor: .center) {
                         ArtMapElementView(element: element)
                     }
+                    
                 }
                     .frame(width: .infinity, height: 160)
                     .clipShape(RoundedRectangle(cornerRadius: 25))
