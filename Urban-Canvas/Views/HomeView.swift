@@ -18,36 +18,56 @@ struct HomeView: View {
     @State var selectedSegment: Bool = true
     
     var body: some View {
-        
         ZStack(alignment: .top) {
             VStack{
-                    if showDetailFromCard {
-                        ArtDetailView(element: selectedCard, isFilterButtonShowing: $isFilterButtonShowing)
-                    } else
-                    if selectedSegment {
-                        ArtListView(artlist: $artlist, selectedType: $selectedType, isFilterButtonShowing: $isFilterButtonShowing,selectedCard: $selectedCard, showDetailFromCard: $showDetailFromCard)
-                    } else if !selectedSegment{
-                        MapView(artlist: $artlist, selectedType: $selectedType,isFilterButtonShowing: $isFilterButtonShowing, selectedCard: $selectedCard, isPresented: $isPresented,showDetailFromCard: $showDetailFromCard, selectedSegment: $selectedSegment)
-                    }
+                //                if showDetailFromCard {
+                //                    ArtDetailView(element: selectedCard, isFilterButtonShowing: $isFilterButtonShowing)
+                //                } else
+                if selectedSegment {
+                    ArtListView(artlist: $artlist, selectedType: $selectedType, isFilterButtonShowing: $isFilterButtonShowing,selectedCard: $selectedCard, showDetailFromCard: $showDetailFromCard)
+                } else if !selectedSegment{
+                    MapView(artlist: $artlist, selectedType: $selectedType,isFilterButtonShowing: $isFilterButtonShowing, selectedCard: $selectedCard, isPresented: $isPresented,showDetailFromCard: $showDetailFromCard, selectedSegment: $selectedSegment)
                 }
-                .padding(.top)
-                .ignoresSafeArea()
-                HStack {
-                    if isFilterButtonShowing {
-                        Picker("segment", selection: $selectedSegment) {
-                            Text("Liste").tag(true)
-                            Text("Carte").tag(false)
-                        }
-                        .pickerStyle(.segmented)
-                        
-                        Spacer()
-                        FilterButtonView(isFilterOpen: $isFilterOpen, selectedType: $selectedType)
-                    }
-                }
-                .padding(.horizontal)
             }
+            .padding(.top)
+            .ignoresSafeArea()
+            HStack {
+                if isFilterButtonShowing {
+                    Picker("segment", selection: $selectedSegment) {
+                        Text("Liste").tag(true)
+                        Text("Carte").tag(false)
+                    }
+                    .pickerStyle(.segmented)
+                    
+                    Spacer()
+                    FilterButtonView(isFilterOpen: $isFilterOpen, selectedType: $selectedType)
+                }
+            }
+            .padding(.horizontal)
         }
+        .fullScreenCover(isPresented: $showDetailFromCard) {
+            NavigationStack {
+                ArtDetailView(element: selectedCard, isFilterButtonShowing: $isFilterButtonShowing)
+                    .overlay(alignment: .topLeading) {
+                        Button {
+                            showDetailFromCard.toggle()
+                        } label: {
+                            Image(systemName: "chevron.backward")
+                                .font(.title2)
+                                .padding(13)
+                                .background(.white)
+                                .foregroundStyle(.black.opacity(1.0))
+                                .clipShape(.circle)
+                                .padding(.horizontal)
+                                .shadow(radius: 10, y:5)
+                        }
+                        .offset(x:5,y:-50)
+                    }
+            }
+        } // finish fullsheet
     }
+}
+
 
 #Preview {
     HomeView()

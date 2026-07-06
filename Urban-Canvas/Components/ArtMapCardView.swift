@@ -41,7 +41,6 @@ struct ArtMapCardView: View {
                     isPresented.toggle()
                     selectedSegment.toggle()
                     showDetailFromCard.toggle()
-                    
                 } label: {
                     Image(systemName: "arrow.right")
                         .font(.title3)
@@ -50,13 +49,6 @@ struct ArtMapCardView: View {
                         .foregroundStyle(.white)
                         .clipShape(.circle)
                 }
-//                .fullScreenCover(isPresented: $showDetailFromCard) {
-//                    NavigationStack {
-//                        NavigationLink("") {
-//                            ArtDetailView(element: selectedCard, isFilterButtonShowing: $isFilterButtonShowing)
-//                        }
-//                    }
-//                }
             }
             .padding()
             AsyncImage(url: element.image) { image in
