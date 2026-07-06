@@ -73,7 +73,20 @@ struct HomeView: View {
     HomeView()
 }
 
-
+// NOTES
 //if showDetailFromCard {
 //    ArtDetailView(element: selectedCard, isFilterButtonShowing: $isFilterButtonShowing)
 //}
+
+// V3
+//init() {
+//            UISegmentedControl.appearance().selectedSegmentTintColor = UIColor.orange
+//            UISegmentedControl.appearance().setTitleTextAttributes(
+//                [.foregroundColor: UIColor.white],
+//                for: .selected
+//            )
+//            UISegmentedControl.appearance().setTitleTextAttributes(
+//                [.foregroundColor: UIColor.orange],
+//                for: .normal
+//            )
+//        }

@@ -110,22 +110,104 @@ var listArtworks: [Artwork] =
         adresse: "8 Rue d'Alsace, 34000",
         coordinate: CLLocationCoordinate2D(latitude: 43.605939, longitude: 3.883443)
     ),
+    Artwork(
+        image: URL(string: "https://streetartcities.com/media/c/c073b05b-4dac-4c16-8b15-1b58b889adc1/orig.jpg")!,
+        name: "The Shadow",
+        type: "Stencil",
+        description: "Ce pochoir urbain percutant fait surgir The Shadow, héros masqué des comics, de l'obscurité d'un mur de briques. Cape au vent et chapeau noir abaissé, son regard perçant défie la rue, incarnant le justicier de l'ombre avec intensité.",
+        condition: "Bonne",
+        date: ("Juillet", 2026),
+        auteur: "Neftnik",
+        city: "Hamburg",
+        adresse: "Ölmühle 2, 20357",
+        coordinate: CLLocationCoordinate2D(latitude: 53.79512795218988, longitude: 10.003370500464577)
+    ),
+    Artwork(
+        image: URL(string: "https://streetartcities.com/media/4/4f4c1145-26b5-4f41-a223-488355676691/orig.jpg")!,
+        name: "Portrait",
+        type: "Stencil",
+        description: "Ce pochoir minimaliste saisit le regard intense d'une jeune fille fixant le spectateur. Silhouette épurée aux lignes graphiques, elle porte un bonnet en forme de requin. Une œuvre urbaine percutante, mêlant innocence enfantine et force graphique sur le béton brut.",
+        condition: "Bonne",
+        date: ("Octobre", 2021),
+        auteur: "NJO972",
+        city: "Paris",
+        adresse: "1 bis Cité Griset, 75011",
+        coordinate: CLLocationCoordinate2D(latitude: 49.1848762, longitude: 2.3950572)
+    ),
+    Artwork(
+        image: URL(string: "https://streetartcities.com/media/c/c54abd3c-d426-46cf-bd23-36295828c303/orig.jpg")!,
+        name: "Jeanne",
+        type: "Mosaïque",
+        description: "Cette mosaïque street art claque sur le bitume : une Jeanne d’Arc version guerrière urbaine. Armure de chevalier stylisée en tesselles pimpées, elle impose son style avec une crinière rousse flamboyante qui vandalise le mur de couleur. Un hommage brut et ultra-visuel qui donne un sacré coup de jeune au mythe.",
+        condition: "Bonne",
+        date: ("Janvier", 2021),
+        auteur: "Sido Mosaique",
+        city: "Orléans",
+        adresse: "5 Pl. du Châtelet, 45000",
+        coordinate: CLLocationCoordinate2D(latitude: 48.063213, longitude: 1.883056)
+    ),
+    Artwork(
+        image: URL(string: "https://streetartcities.com/media/5/599231c8-8f58-4294-a7e1-ad1a7ace01c7/orig.jpg")!,
+        name: "Blackdoors 76",
+        type: "Mosaïque",
+        description: "Né en 1992, l'artiste parisien BLACKDOORS réinvente la mosaïque urbaine en collant ses carreaux de céramique sur les murs oubliés. Ses œuvres, véritables portes noires en trompe-l'œil, transforment les façades en passages secrets vers l’imaginaire. Un street art texturé et accessible qui bouscule le quotidien des passants.",
+        condition: "Bonne",
+        date: ("Mars", 2022),
+        auteur: "Blackdoors",
+        city: "Paris",
+        adresse: "7 Pass. des Ménétriers, 75003",
+        coordinate: CLLocationCoordinate2D(latitude: 49.13507211, longitude: 2.42584134)
+    ),
+    Artwork(
+        image: URL(string: "https://streetartcities.com/media/b/bff40343-4eda-429a-be78-3d608e9e0a10/orig.jpg")!,
+        name: "Unfair Autotelism",
+        type: "Calligraphie",
+        description: "Ce calligraffiti vibrant fait danser les lettres sur le béton. Alliant l'élégance de la calligraphie à l'énergie du graffiti, les courbes fluides aux dégradés de rouge et d'orange pulsent de vie, tandis que des fleurs stylisées éclosent au sol. Une œuvre ludique et lumineuse.",
+        condition: "Bonne",
+        date: ("Juin", 2023),
+        auteur: "Mista Ndek",
+        city: "Paris",
+        adresse: "2 Pass. de l'Asile, 75011",
+        coordinate: CLLocationCoordinate2D(latitude: 49.16634064, longitude: 2.39275004)
+    ),
+    Artwork(
+        image: URL(string: "https://streetartcities.com/media/5/5c852a06-9d82-4ac9-a485-8345fb388dc1/orig.jpeg")!,
+        name: "Spring Always Comes Back",
+        type: "Calligraphie",
+        description: "Ce monumental calligraffiti d'eL Seed enveloppe la façade d'un immeuble britannique de ses rubans calligraphiques entrelacés. Ses courbes fluides et tridimensionnelles, aux couleurs vibrantes, transcendent la barrière de la langue. Une fusion magistrale de poésie arabe et d’énergie urbaine qui transforme l’architecture en un message de paix universel.",
+        condition: "Bonne",
+        date: ("Mars", 2024),
+        auteur: "el Seed",
+        city: "London",
+        adresse: "19 Millard Rd, London SE8 3GA",
+        coordinate: CLLocationCoordinate2D(latitude: 51.73820097, longitude: -0.01246561)
+    ),
+    Artwork(
+        image: URL(string: "https://streetart.media/7/72335537-2590-4d79-9b01-3efdc258d53f/orig.jpg")!,
+        name: "Be Lucky",
+        type: "Calligraphie",
+        description: "Ce chef-d'œuvre street art d'Inkie fusionne l'Art Nouveau et le graffiti de Bristol. Une muse élégante au regard serein est entourée de lettrages dorés affichant « Be Lucky ». Ses cheveux se transforment en volutes graphiques ultra-précises, apportant une esthétique décorative raffinée et un talisman de chance au cœur de la rue.",
+        condition: "Bonne",
+        date: ("Juin", 2023),
+        auteur: "Inkie",
+        city: "London",
+        adresse: "93 Shakespeare Rd, Cheltenham GL51 7HR",
+        coordinate: CLLocationCoordinate2D(latitude: 52.03198670, longitude: -2.08930506)
+    ),
     
-    
-    
+]
+
+var listAuteurs: [Auteur] =
+[
+    Auteur(
+        image: URL(string: "https://streetart.media/7/72335537-2590-4d79-9b01-3efdc258d53f/orig.jpg")!,
+        name: "Test Artist",
+        age: 30,
+        origin: "The Moon",
+        type: "Stencil",
+        web: URL(string:"https://streetartcities.com/markers/6b7b724c-312c-4978-afd4-a34dfd496420")!
+    ),
     
 ]
 
 
-// V3
-//init() {
-//            UISegmentedControl.appearance().selectedSegmentTintColor = UIColor.orange
-//            UISegmentedControl.appearance().setTitleTextAttributes(
-//                [.foregroundColor: UIColor.white],
-//                for: .selected
-//            )
-//            UISegmentedControl.appearance().setTitleTextAttributes(
-//                [.foregroundColor: UIColor.orange],
-//                for: .normal
-//            )
-//        }
