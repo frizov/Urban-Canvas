@@ -41,7 +41,7 @@ var listArtworks: [Artwork] =
     Artwork(
         image: URL(string: "https://streetartcities.com/media/4/41dfdabb-6320-4e66-b7a9-e71a4cdd4b6c/orig.jpeg")!,
         name: "Jurassic Invader",
-        type: "Invader",
+        type: "Invaders",
         description: "Inspirée par l'univers préhistorique et la culture pop rétro, cette mosaïque en pixels emblématique de l'artiste Invader représente un petit dinosaure pixélisé, s'intégrant parfaitement au décor architectural de la ville.",
         condition: "Bonne",
         date: ("Mars", 2022),
