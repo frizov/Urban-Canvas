@@ -11,30 +11,41 @@ import MapKit
 struct MapView: View {
     @Binding var artlist: [Artwork]
     @Binding var selectedType: String
-    @State var isPresented: Bool = false
     @Binding var isFilterButtonShowing: Bool
+    @Binding var selectedCard: Artwork
+    @Binding var isPresented: Bool
+    @Binding var showDetailFromCard: Bool
+    @Binding var selectedSegment: Bool
     var body: some View {
         Map(position: .constant(.automatic)) {
             ForEach(artlist) { element in
                 if selectedType == "Tous" {
                     Annotation(element.name, coordinate: element.coordinate, anchor: .center) {
-                        
                         Button {
+                            selectedCard = element
                             isPresented.toggle()
+                            
                         } label : {
                             ArtMapElementView(element: element)
-                        }
-                        .sheet(isPresented: $isPresented) {
-                            ArtDetailView(element: element, isFilterButtonShowing: $isFilterButtonShowing)
                         }
                     }
                     
                 } else if element.type == selectedType {
                     Annotation(element.name, coordinate: element.coordinate, anchor: .center) {
-                        ArtMapElementView(element: element)
+                        Button {
+                            selectedCard = element
+                            isPresented.toggle()
+                            
+                        } label : {
+                            ArtMapElementView(element: element)
+                        }
                     }
                 }
             }
+        }
+        .sheet(isPresented: $isPresented, onDismiss: didDismiss) {
+            ArtMapCardView(element: selectedCard, isFilterButtonShowing: $isFilterButtonShowing, isPresented: $isPresented, selectedCard: $selectedCard, showDetailFromCard: $showDetailFromCard, selectedSegment: $selectedSegment)
+                .presentationDetents([.fraction(0.5)])
         }
     }
 }
@@ -42,3 +53,7 @@ struct MapView: View {
 #Preview {
 //    MapView()
 }
+
+func didDismiss() {
+        // Handle the dismissing action.
+    }

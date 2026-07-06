@@ -11,6 +11,8 @@ struct ArtListView: View {
     @Binding var artlist: [Artwork]
     @Binding var selectedType: String
     @Binding var isFilterButtonShowing: Bool
+    @Binding var selectedCard: Artwork
+    @Binding var showDetailFromCard: Bool
     var body: some View {
         NavigationStack {
             List(listArtworks) { element in
@@ -34,7 +36,6 @@ struct ArtListView: View {
             }
             .navigationTitle("Liste des Street Art")
         }
-//        .overlay(alignment: .top) { FilterButtonView()}
     }
 }
 

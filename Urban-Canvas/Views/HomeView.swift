@@ -12,41 +12,48 @@ struct HomeView: View {
     @State var isFilterOpen: Bool = false
     @State var selectedType: String = "Tous"
     @State var isFilterButtonShowing: Bool = true
-    
-    enum segments: String, CaseIterable, Identifiable {
-        case list, map
-        var id: Self { self }
-    }
-    @State private var selectedSegment: segments = .list
+    @State var selectedCard: Artwork = listArtworks[0]
+    @State var isPresented: Bool = false
+    @State var showDetailFromCard: Bool = false
+    @State var selectedSegment: Bool = true
     
     var body: some View {
+        
         ZStack(alignment: .top) {
             VStack{
-                if selectedSegment == .list {
-                    ArtListView(artlist: $artlist, selectedType: $selectedType, isFilterButtonShowing: $isFilterButtonShowing)
-                } else {
-                    MapView(artlist: $artlist, selectedType: $selectedType,isFilterButtonShowing: $isFilterButtonShowing)
-                }
-            }
-            .padding(.top)
-            .ignoresSafeArea()
-            HStack {
-                if isFilterButtonShowing {
-                    Picker("segment", selection: $selectedSegment) {
-                        Text("Liste").tag(HomeView.segments.list)
-                        Text("Carte").tag(HomeView.segments.map)
+                    if showDetailFromCard {
+                        ArtDetailView(element: selectedCard, isFilterButtonShowing: $isFilterButtonShowing)
+                    } else
+                    if selectedSegment {
+                        ArtListView(artlist: $artlist, selectedType: $selectedType, isFilterButtonShowing: $isFilterButtonShowing,selectedCard: $selectedCard, showDetailFromCard: $showDetailFromCard)
+                    } else if !selectedSegment{
+                        MapView(artlist: $artlist, selectedType: $selectedType,isFilterButtonShowing: $isFilterButtonShowing, selectedCard: $selectedCard, isPresented: $isPresented,showDetailFromCard: $showDetailFromCard, selectedSegment: $selectedSegment)
                     }
-                    .pickerStyle(.segmented)
-                    
-                    Spacer()
-                    FilterButtonView(isFilterOpen: $isFilterOpen, selectedType: $selectedType)
                 }
+                .padding(.top)
+                .ignoresSafeArea()
+                HStack {
+                    if isFilterButtonShowing {
+                        Picker("segment", selection: $selectedSegment) {
+                            Text("Liste").tag(true)
+                            Text("Carte").tag(false)
+                        }
+                        .pickerStyle(.segmented)
+                        
+                        Spacer()
+                        FilterButtonView(isFilterOpen: $isFilterOpen, selectedType: $selectedType)
+                    }
+                }
+                .padding(.horizontal)
             }
-            .padding(.horizontal)
         }
     }
-}
 
 #Preview {
     HomeView()
 }
+
+
+//if showDetailFromCard {
+//    ArtDetailView(element: selectedCard, isFilterButtonShowing: $isFilterButtonShowing)
+//}
