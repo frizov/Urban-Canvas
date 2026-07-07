@@ -60,8 +60,8 @@ struct ArtMapCardView: View {
             .scaledToFill()
             .frame(maxWidth: .infinity, maxHeight: 180)
             .clipped()
-            .onAppear { isFilterButtonShowing.toggle() }
-            .onDisappear { isFilterButtonShowing.toggle() }
+//            .onAppear { isFilterButtonShowing.toggle() }
+//            .onDisappear { isFilterButtonShowing.toggle() }
             .allowsHitTesting(false)
             //Description
             Text(element.description)

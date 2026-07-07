@@ -16,9 +16,6 @@ struct ArtListView: View {
     
     var body: some View {
         NavigationStack {
-//            if showDetailFromCard {
-//                    ArtDetailView(element: selectedCard, isFilterButtonShowing: $isFilterButtonShowing)
-//            } else {
                 List(listArtworks) { element in
                     if selectedType == "Tous" {
                         NavigationLink {
@@ -38,7 +35,7 @@ struct ArtListView: View {
                         }
                     }
                 }
-                .navigationTitle("Liste des Street Art")
+                .navigationTitle("Liste des Street Arts")
             }
         }
     }

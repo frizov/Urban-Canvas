@@ -22,6 +22,12 @@ struct TabBarView: View {
                 Label("Auteurs", systemImage: "person.crop.circle")
                     .environment(\.symbolVariants, .none)
             }
+            MissionView()
+                .tabItem
+            {
+                Label("Mission", systemImage: "square.3.stack.3d.bottom.filled")
+                    .environment(\.symbolVariants, .none)
+            }
         }
         .accentColor(.mainOrange)
         

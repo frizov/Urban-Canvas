@@ -35,7 +35,10 @@ struct HomeView: View {
                         Text("Carte").tag(false)
                     }
                     .pickerStyle(.segmented)
-                    
+                    .colorMultiply(.secondaryOrange)
+                    .background(.thickMaterial)
+                    .frame(width: 280)
+                    .clipShape(.capsule)
                     Spacer()
                     FilterButtonView(isFilterOpen: $isFilterOpen, selectedType: $selectedType)
                 }
@@ -75,15 +78,3 @@ struct HomeView: View {
 //    ArtDetailView(element: selectedCard, isFilterButtonShowing: $isFilterButtonShowing)
 //}
 
-// V3
-//init() {
-//            UISegmentedControl.appearance().selectedSegmentTintColor = UIColor.orange
-//            UISegmentedControl.appearance().setTitleTextAttributes(
-//                [.foregroundColor: UIColor.white],
-//                for: .selected
-//            )
-//            UISegmentedControl.appearance().setTitleTextAttributes(
-//                [.foregroundColor: UIColor.orange],
-//                for: .normal
-//            )
-//        }

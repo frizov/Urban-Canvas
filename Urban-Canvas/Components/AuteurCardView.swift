@@ -47,9 +47,8 @@ struct AuteurCardView: View {
                 }
                 .padding(.top, 5)
                 .padding(.bottom, 10)
-                Button {
-                    selectedWeb = artist.web
-                    showWebView.toggle()
+                NavigationLink {
+                    WebView(url: artist.web)
                 } label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 50)
