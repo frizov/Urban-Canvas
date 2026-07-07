@@ -39,7 +39,7 @@ struct ArtMapCardView: View {
                 // ArtDetailView
                 Button {
                     isPresented.toggle()
-                    selectedSegment.toggle()
+//                    selectedSegment.toggle()
                     showDetailFromCard.toggle()
                 } label: {
                     Image(systemName: "arrow.right")
@@ -60,8 +60,8 @@ struct ArtMapCardView: View {
             .scaledToFill()
             .frame(maxWidth: .infinity, maxHeight: 180)
             .clipped()
-            .onAppear { isFilterButtonShowing.toggle() }
-            .onDisappear { isFilterButtonShowing.toggle() }
+//            .onAppear { isFilterButtonShowing.toggle() }
+//            .onDisappear { isFilterButtonShowing.toggle() }
             .allowsHitTesting(false)
             //Description
             Text(element.description)

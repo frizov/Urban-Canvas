@@ -20,9 +20,6 @@ struct HomeView: View {
     var body: some View {
         ZStack(alignment: .top) {
             VStack{
-                //                if showDetailFromCard {
-                //                    ArtDetailView(element: selectedCard, isFilterButtonShowing: $isFilterButtonShowing)
-                //                } else
                 if selectedSegment {
                     ArtListView(artlist: $artlist, selectedType: $selectedType, isFilterButtonShowing: $isFilterButtonShowing,selectedCard: $selectedCard, showDetailFromCard: $showDetailFromCard)
                 } else if !selectedSegment{
@@ -38,7 +35,10 @@ struct HomeView: View {
                         Text("Carte").tag(false)
                     }
                     .pickerStyle(.segmented)
-                    
+                    .colorMultiply(.secondaryOrange)
+                    .background(.thickMaterial)
+                    .frame(width: 280)
+                    .clipShape(.capsule)
                     Spacer()
                     FilterButtonView(isFilterOpen: $isFilterOpen, selectedType: $selectedType)
                 }
@@ -64,7 +64,7 @@ struct HomeView: View {
                         .offset(x:5,y:-50)
                     }
             }
-        } // finish fullsheet
+        } // finish of fullsheet
     }
 }
 
@@ -78,15 +78,3 @@ struct HomeView: View {
 //    ArtDetailView(element: selectedCard, isFilterButtonShowing: $isFilterButtonShowing)
 //}
 
-// V3
-//init() {
-//            UISegmentedControl.appearance().selectedSegmentTintColor = UIColor.orange
-//            UISegmentedControl.appearance().setTitleTextAttributes(
-//                [.foregroundColor: UIColor.white],
-//                for: .selected
-//            )
-//            UISegmentedControl.appearance().setTitleTextAttributes(
-//                [.foregroundColor: UIColor.orange],
-//                for: .normal
-//            )
-//        }
