@@ -197,17 +197,117 @@ var listArtworks: [Artwork] =
     
 ]
 
-var listAuteurs: [Auteur] =
-[
+var listAuteurs: [Auteur] = [
     Auteur(
-        image: URL(string: "https://streetart.media/7/72335537-2590-4d79-9b01-3efdc258d53f/orig.jpg")!,
-        name: "Test Artist",
-        age: 30,
-        origin: "The Moon",
-        type: "Stencil",
-        web: URL(string:"https://streetartcities.com/markers/6b7b724c-312c-4978-afd4-a34dfd496420")!
+        image: URL(string: "https://streetdesigners.fr/wp-content/uploads/2025/07/60b3e9ee9c685756c4fc8292_Invader02.webp")!,
+        name: "Invader",
+        age: 57,
+        origin: "France",
+        type: "Invaders",
+        web: URL(string: "https://www.space-invaders.com")!
     ),
-    
+    Auteur(
+        image: URL(string: "https://cdn.shopify.com/s/files/1/0539/1781/0887/t/6/assets/pf-f430fd89--IMG20210117WA0000-Edited?v=1620267263")!,
+        name: "Yellow",
+        age: 35,
+        origin: "France",
+        type: "Mural",
+        web: URL(string: "https://www.yellowcolorz.com")!
+    ),
+    Auteur(
+        image: URL(string: "https://cdn.paris.fr/paris/2021/10/04/original-7eb918737242beba1eb6c9bf1b8fcde8.jpeg")!,
+        name: "Kan DMV",
+        age: 49,
+        origin: "France",
+        type: "Mural",
+        web: URL(string: "https://kandmv.com")!
+    ),
+    Auteur(
+        image: URL(string: "https://streetartcities.com/media/9/96fd9d0f-e7b4-4f77-a44c-40c68935bd1d/orig.jpg")!,
+        name: "Seta Fuerte",
+        age: 38,
+        origin: "Colombie",
+        type: "Mural",
+        web: URL(string: "https://www.flickr.com/photos/enlaraya/")!
+    ),
+    Auteur(
+        image: URL(string: "https://static.actu.fr/uploads/2021/07/20210701-163604-960x640.jpg")!,
+        name: "Louyz",
+        age: 32,
+        origin: "France",
+        type: "Mural",
+        web: URL(string: "https://www.louyz.fr")!
+    ),
+    Auteur(
+        image: URL(string: "https://cdn.shopify.com/s/files/1/0577/7195/0195/files/rue_saint_michel_strasbourg_stork_9.jpg?v=1748614032")!,
+        name: "Stork Pixelart",
+        age: 29,
+        origin: "France",
+        type: "Mosaïque",
+        web: URL(string: "https://pixelcorner.fr/en/blogs/infos/zoom-sur-artiste-stork?srsltid=AfmBOoraVbKIJKxoJzFMWVMZw6wznaqScLIunyz9mT-mdzbRtmTMPkK7")!
+    ),
+    Auteur(
+        image: URL(string: "https://static.wixstatic.com/media/82909f_0dac01a9094a443ca9b59f983b552a37~mv2.png/v1/fill/w_1233,h_1687,al_c,q_95,enc_avif,quality_auto/82909f_0dac01a9094a443ca9b59f983b552a37~mv2.png")!,
+        name: "Adec",
+        age: 41,
+        origin: "France",
+        type: "Mural",
+        web: URL(string: "https://www.ad-ec.net")!
+    ),
+    Auteur(
+        image: URL(string: "https://streetartcities.com/media/c/c073b05b-4dac-4c16-8b15-1b58b889adc1/orig.jpg")!,
+        name: "Neftnik",
+        age: 34,
+        origin: "Allemagne",
+        type: "Stencil",
+        web: URL(string: "https://www.wallhunt.io/artists/neftnik")!
+    ),
+    Auteur(
+        image: URL(string: "https://www.trompe-l-oeil.info/graffitis/data/media/82/Paris3939-street-art-William-NJO-02.jpg")!,
+        name: "NJO972",
+        age: 26,
+        origin: "Martinique (France)",
+        type: "Stencil",
+        web: URL(string: "https://www.instagram.com/njo_972/?hl=en")!
+    ),
+    Auteur(
+        image: URL(string: "https://scontent-cdg6-1.cdninstagram.com/v/t51.82787-19/557411873_18532192492020090_4883279623808317937_n.jpg?stp=dst-jpg_s320x320_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=scontent-cdg6-1.cdninstagram.com&_nc_cat=106&_nc_oc=Q6cZ2gHa0-V4k8gpERdJApY90vnWiiVyhRQb_XtJu4yv08BQ-MX1bQ5oy5OHNmDSFEhH_-k&_nc_ohc=Se1c6jfcWRYQ7kNvwGMPtp4&_nc_gid=5cioSP6aWYePs05duwJXAQ&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AQA_Sqr6v9jFPUaV-DrzodlI_ojFNFboEhCuWhTiQFneCA&oe=6A526974&_nc_sid=8b3546")!,
+        name: "Sido Mosaique",
+        age: 30,
+        origin: "France",
+        type: "Mosaïque",
+        web: URL(string: "https://www.instagram.com/sido_glassmosaic/")!
+    ),
+    Auteur(
+        image: URL(string: "https://blackdoors.org/wp-content/uploads/2025/04/4-1536x2048.jpg")!,
+        name: "Blackdoors",
+        age: 34,
+        origin: "France",
+        type: "Mosaïque",
+        web: URL(string: "https://blackdoors.org/?v=82a9e4d26595")!
+    ),
+    Auteur(
+        image: URL(string: "https://streetartcities.com/media/b/bff40343-4eda-429a-be78-3d608e9e0a10/orig.jpg")!,
+        name: "Mista Ndek",
+        age: 36,
+        origin: "France",
+        type: "Calligraphie",
+        web: URL(string: "https://www.instagram.com/mista_ndek")!
+    ),
+    Auteur(
+        image: URL(string: "https://elseed-art.com/wp-content/uploads/elementor/thumbs/Artist-1-r85wf5d1nnbh1ybl1r73n3aav9jv941d2t7rqlzix4.jpg")!,
+        name: "el Seed",
+        age: 45,
+        origin: "Tunisie / France",
+        type: "Calligraphie",
+        web: URL(string: "https://elseed-art.com")!
+    ),
+    Auteur(
+        image: URL(string: "https://assets.bigcartel.com/product_images/6d251fc6-1914-4d18-a869-82e5b47021a2/scarlet-rouge.jpg?auto=format&fit=max&h=1000&w=1000")!,
+        name: "Inkie",
+        age: 56,
+        origin: "Royaume-Uni",
+        type: "Calligraphie",
+        web: URL(string: "https://inkie.bigcartel.com")!
+    )
 ]
-
-
