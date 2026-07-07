@@ -10,6 +10,8 @@ import WebKit
 
 struct AuteurCardView: View {
     var artist: Auteur
+    @Binding var showWebView: Bool
+    @Binding var selectedWeb: URL 
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 25)
@@ -43,9 +45,11 @@ struct AuteurCardView: View {
                     Text("\(Text("Style : ").fontWeight(.bold))\(Text(artist.type))")
                         .font(.caption2)
                 }
-                .padding(10)
+                .padding(.top, 5)
+                .padding(.bottom, 10)
                 Button {
-                    WebView(url: artist.web)
+                    selectedWeb = artist.web
+                    showWebView.toggle()
                 } label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 50)
@@ -63,5 +67,5 @@ struct AuteurCardView: View {
 }
 
 #Preview {
-    AuteurCardView(artist: listAuteurs[0])
+//    AuteurCardView(artist: listAuteurs[0], showWebView: .constant(false))
 }

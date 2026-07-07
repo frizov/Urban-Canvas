@@ -39,7 +39,7 @@ struct ArtMapCardView: View {
                 // ArtDetailView
                 Button {
                     isPresented.toggle()
-                    selectedSegment.toggle()
+//                    selectedSegment.toggle()
                     showDetailFromCard.toggle()
                 } label: {
                     Image(systemName: "arrow.right")

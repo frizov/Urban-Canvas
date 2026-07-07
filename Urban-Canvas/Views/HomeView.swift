@@ -20,9 +20,6 @@ struct HomeView: View {
     var body: some View {
         ZStack(alignment: .top) {
             VStack{
-                //                if showDetailFromCard {
-                //                    ArtDetailView(element: selectedCard, isFilterButtonShowing: $isFilterButtonShowing)
-                //                } else
                 if selectedSegment {
                     ArtListView(artlist: $artlist, selectedType: $selectedType, isFilterButtonShowing: $isFilterButtonShowing,selectedCard: $selectedCard, showDetailFromCard: $showDetailFromCard)
                 } else if !selectedSegment{
@@ -64,7 +61,7 @@ struct HomeView: View {
                         .offset(x:5,y:-50)
                     }
             }
-        } // finish fullsheet
+        } // finish of fullsheet
     }
 }
 
