@@ -11,7 +11,7 @@ import SwiftUI
 struct Urban_CanvasApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            TabBarView()
         }
     }
 }
